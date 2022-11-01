@@ -90,6 +90,7 @@
                <th class="text-left">Stock</th>
                <th class="text-left">Precio</th>
                <th class="text-left">ID</th>
+               <th class="text-left">Creado</th>
                <th class="text-left">Acciones</th>
             </tr>
          </thead>
@@ -104,6 +105,7 @@
                <td>{{ producto.stock }}</td>
                <td>{{ producto.precio }}</td>
                <td>{{ producto._id }}</td>
+               <td>{{ producto.creado | date: 'dd/MM/yyyy' }}</td>
                <td>
                   <button
                      [routerLink]="['/producto/editar', producto._id]"
