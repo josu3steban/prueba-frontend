@@ -1,0 +1,32 @@
+
+
+<div class="">
+
+   <div class="bg-mi-color-dos px-8 py-5 mb-8">
+      <h2
+         class="
+            text-mi-color-uno
+            text-5xl
+            font-black
+         "
+      >Ver producto</h2>
+   </div>
+
+   <div
+      *ngIf="producto"
+      class="ml-5">
+
+      <h3 class="text-2xl">Producto: {{ producto.nombre }}</h3>
+
+      <p>Descripción: {{ producto.descripcion }}</p>
+
+      <p>Precio: {{ producto.precio }}</p>
+
+      <p>Stock: {{ producto.stock }}</p>
+      
+   </div>
+   
+
+   
+   
+</div>

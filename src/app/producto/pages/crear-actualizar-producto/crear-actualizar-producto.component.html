@@ -1,0 +1,123 @@
+
+<div class="">
+
+   <div class="bg-mi-color-dos px-8 py-5 mb-8">
+      <h2
+         class="
+            text-mi-color-uno
+            text-5xl
+            font-black
+         "
+      >{{ !productoId ? 'Crear producto' : 'Actualizar producto'}}</h2>
+
+      
+      
+   </div>
+
+   <div 
+      *ngIf="hayError"
+      class="text-mi-color-uno mb-4 text-center bg-red-500 w-3/5 mx-auto rounded-md text-xl"
+   >
+      Todos los campos son obligatorios
+   </div>
+
+   <form 
+      (ngSubmit)="crearProducto()"
+      class="bg-mi-color-tres w-3/5 mx-auto px-4 py-2 rounded-md"
+   >
+
+      <div class="flex flex-col mb-5">
+         <label for="nombre">Nombre</label>
+         <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre del producto"
+
+            [(ngModel)]="nombre"
+
+            class="
+               px-2
+               py-1
+               rounded-md
+            "
+         >
+      </div>
+
+      <div class="flex flex-col mb-5">
+         <label for="descripcion">Descripción</label>
+         <textarea
+            type="text"
+            name="descripcion"
+            id="descripcion"
+            placeholder="Descripcion del producto"
+            cols="3"
+            rows="3"
+
+            [(ngModel)]="descripcion"
+
+            class="
+               px-2
+               py-1
+               rounded-md
+            "
+         ></textarea>
+
+      </div>
+
+      <div class="flex flex-col mb-5">
+         <label for="stock">Stock</label>
+         <input
+            type="number"
+            name="stock"
+            id="stock"
+            placeholder="Stock del producto"
+
+            [(ngModel)]="stock"
+
+            class="
+               px-2
+               py-1
+               rounded-md
+            "
+         >
+      </div>
+
+      <div class="flex flex-col mb-8">
+         <label for="precio">Precio</label>
+         <input
+            type="number"
+            name="precio"
+            id="precio"
+            placeholder="Precio del producto"
+
+            [(ngModel)]="precio"
+
+            class="
+               px-2
+               py-1
+               rounded-md
+            "
+         >
+      </div>
+
+
+      <button
+         class="
+            w-full
+            bg-mi-color-dos
+            text-mi-color-uno
+            text-2xl
+            font-bold
+            py-2
+            rounded-md
+            
+            hover:
+         "
+      >
+         GUARDAR
+      </button>
+      
+   </form>
+   
+</div>
